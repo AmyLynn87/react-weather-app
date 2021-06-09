@@ -17,7 +17,7 @@ if (hours < 10) {
 }
 let minutes = props.date.getMinutes();
 if (minutes < 10) {
-    hours = `0${minutes}`;
+    minutes = `0${minutes}`;
 }
 
     return (
