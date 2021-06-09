@@ -1,9 +1,13 @@
 .App {
-    max-width: 600px;
+    max-width: 800px;
     margin: 30px auto;
   }
   
   .App footer {
     font-size: 11px;
     margin: 10px 0;
+  }
+
+  .WeatherTemperature a {
+    text-decoration: none;
   }
