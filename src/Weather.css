@@ -47,3 +47,8 @@
   line-height: 1;
   top: -34px;
 }
+
+.Weather .weather-icon {
+  position: relative;
+  bottom: 5px;
+}
