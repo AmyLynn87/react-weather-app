@@ -8,6 +8,23 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+
+  function findCurrentCityWeather(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "d26532ff8daeb7bfba16a428adc3af08";
+    let units = "metric";
+    let apiEndpoint ="https://api.openweathermap.org/data/2.5/weather"
+    let apiUrl =`${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleCoordinates(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(findCurrentCityWeather);
+  }
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -52,7 +69,7 @@ export default function Weather(props) {
   <button className="input-group-text" type="submit" >
     <i className="fas fa-search" />
   </button>
-  <button className="input-group-text">
+  <button className="input-group-text" onClick={handleCoordinates}>
     Current City
   </button>
   </div>
