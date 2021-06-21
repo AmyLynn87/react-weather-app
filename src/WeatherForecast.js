@@ -19,13 +19,14 @@ function handleResponse(response) {
 }
 
 
+
 if(loaded) {
     console.log(forecast);
     return (
         <div className="WeatherForecast">
             <div className="row">
                 {forecast.map(function(dailyForecast, index) {
-                    if(index < 5) {
+                    if(index < 4) {
                         return (
                         <div className="col" key={index}>
                         <WeatherForecastDay data={dailyForecast} />
