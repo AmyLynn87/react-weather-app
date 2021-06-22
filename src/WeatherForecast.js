@@ -23,7 +23,7 @@ function handleResponse(response) {
 if(loaded) {
     console.log(forecast);
     return (
-        <div className="WeatherForecast">
+        <div className="WeatherForecast mt-3">
             <div className="row">
                 {forecast.map(function(dailyForecast, index) {
                     if(index < 4) {
