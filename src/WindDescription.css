@@ -1,0 +1,96 @@
+.lightAir {
+    background-color: yellow;
+    color: black;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.lightBreeze {
+    background-color: gold;
+    color: black;
+    width: 45%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.gentleBreeze {
+    background-color: rgb(255, 196, 0);
+    color: black;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mediumBreeze {
+    background-color: orange;
+    color: black;
+    width: 55%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.freshBreeze {
+    background-color: orangered;
+    color: black;
+    width: 45%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.strongBreeze {
+    background-color: rgb(212, 58, 2);
+    color: black;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mediumGale {
+    background-color: pink;
+    color: black;
+    width: 45%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.freshGale {
+    background-color: violet;
+    color: black;
+    width: 40%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.strongGale {
+    background-color: rgb(158, 1, 158);
+    color: white;
+    width: 40%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.fullGale {
+    background-color: purple;
+    color: white;
+    width: 35%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.storm {
+    background-color: rgb(76, 27, 122);
+    color: white;
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hurricane {
+    background-color: blue;
+    color: white;
+    width: 35%;
+    border-radius: 5px;
+    text-align: center;
+}
+
