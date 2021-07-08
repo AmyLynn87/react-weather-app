@@ -3,10 +3,12 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WindDescription from "./WindDescription";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherCuriosity from "./WeatherCuriosity";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
+    <div className="WeatherInfo row">
+        <div className="col-sm-4">
       <h1>{props.data.city}</h1>
       <ul>
         <li>
@@ -14,6 +16,10 @@ export default function WeatherInfo(props) {
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
+      </div>
+      <div className="col-sm-8">
+        <WeatherCuriosity />
+      </div>
       <div className="row mt-3">
         <div className="col-sm ">
           <div className="d-flex">

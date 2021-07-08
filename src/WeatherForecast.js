@@ -21,7 +21,6 @@ function handleResponse(response) {
 
 
 if(loaded) {
-    console.log(forecast);
     return (
         <div className="WeatherForecast mt-3">
             <div className="row">
