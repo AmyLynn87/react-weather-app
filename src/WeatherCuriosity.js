@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "./WeatherCuriosity.css";
 
-export default function WeatherCuriosity() {
+export default function WeatherCuriosity(props) {
 
     const curiosityArray = [ 
         "A hurricane is a very powerful storm. Weather officers on board at \"Hurricane Hunter\" plane, take measurements to see what the storm will do next.",
@@ -65,6 +65,10 @@ export default function WeatherCuriosity() {
    const [curiosity, setCuriosity] = useState("");
    const [loaded, setLoaded] = useState(false);
 
+   useEffect(() => {
+    setLoaded(false);
+    }, [props.coordinates]);
+
    
    function fetchCount() {
     const curiosityCount = Math.floor(Math.random() * curiosityArray.length);
@@ -75,11 +79,11 @@ export default function WeatherCuriosity() {
     if (loaded) {
     return (
         <div className="WeatherCuriosity">
-            <h4>Did you know?</h4>
+          <h4>Did you know?</h4>
         {curiosityArray[curiosity]}
         </div>
     );} else {
         fetchCount();
     }
-
-}
+      
+ }
