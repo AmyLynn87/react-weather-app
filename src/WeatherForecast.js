@@ -29,7 +29,7 @@ if(loaded) {
                     if( index > 0 && index < 5) {
                         return (
                         <div className="col" key={index}>
-                        <WeatherForecastDay data={dailyForecast} />
+                        <WeatherForecastDay data={dailyForecast} celsius={props.celsius} fahrenheit={props.fahrenheit} />
                      </div>);
                     } else {
                         return null;

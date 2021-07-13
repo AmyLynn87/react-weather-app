@@ -8,6 +8,8 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [celsius, setCelsius] = useState("celsius");
+  const [fahrenheit, setFahrenheit] = useState("");
 
 
   function findCurrentCityWeather(position) {
@@ -40,6 +42,18 @@ export default function Weather(props) {
     });
   }
 
+  function handleCelsius(event) {
+    event.preventDefault();
+    setCelsius("celsius");
+    setFahrenheit(null);
+  }
+
+  function handleFahrenheit(event) {
+    event.preventDefault();
+    setFahrenheit("fahrenheit");
+    setCelsius(null);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -67,6 +81,13 @@ export default function Weather(props) {
     autoFocus="on"
     onChange={handleCityChange}
   />
+  <button className="input-group-text" onClick={handleCelsius}>
+    °C
+  </button>
+  <button className="input-group-text" onClick={handleFahrenheit}>
+    °F
+  </button>
+
   <button className="input-group-text" type="submit" >
     <i className="fas fa-search" />
   </button>
@@ -75,8 +96,8 @@ export default function Weather(props) {
   </button>
   </div>
         </form>
-        <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <WeatherInfo data={weatherData} celsius={celsius} fahrenheit={fahrenheit} />
+        <WeatherForecast coordinates={weatherData.coordinates} celsius={celsius} fahrenheit={fahrenheit} />
         <WeatherCuriosity coordinates={weatherData.coordinates} />
       </div>
     );
